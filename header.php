@@ -18,6 +18,9 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.0.13/default/snipcart.css" />
+<div id="snipcart" data-api-key="YjI3NDg5YzMtMjUwOC00NjJiLTg1MmYtMTRiZWY4NjJiODIyNjM3MjYwODczNjk1NDE5MTg3" hidden></div>
+<script src="https://cdn.snipcart.com/themes/v3.0.13/default/snipcart.js"></script>
 </head>
 
 <body <?php body_class(); ?>>
