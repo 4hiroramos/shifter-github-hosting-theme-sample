@@ -1,37 +1,14 @@
-<?php
-/**
- * The template for displaying all single posts
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
- *
- * @package Shifter_GitHub_hosting_theme_sample
- */
+<div id="product" class="site-content">
 
-get_header();
-?>
+    <img src="<?php the_field('snipcart_image') ?>" />
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+    <button class="snipcart-add-item"
+        data-item-id="<?php echo $post->ID ?>" 
+        data-item-name="<?php the_field('snipcart_name') ?>" 
+        data-item-url="<?php echo get_permalink(); ?>" 
+        data-item-price="<?php the_field('snipcart_price') ?>" 
+        data-item-description="<?php the_field('snipcart_description') ?>"
+        data-item-image="<?php the_field('snipcart_image') ?>">
+        Buy now for <?php the_field('snipcart_price') ?> $ 
+    </button>
+</div> 
